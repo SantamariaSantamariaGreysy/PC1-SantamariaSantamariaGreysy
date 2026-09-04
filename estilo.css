@@ -1,0 +1,80 @@
+.container{
+  
+    font-family:  Arial,sans-serif;
+    display: grid;
+    grid-template-columns:  20vh 1fr ;
+    grid-template-rows: 10vh 1fr 10vh;
+    grid-template-areas:
+                     "header header"
+                     "sidebar main"
+                     "footer footer";
+    gap: 10px;
+}
+header{
+    grid-area: header;
+    background-color: #a860caa8;
+    padding: 10px;
+}
+
+aside{
+
+    grid-area:sidebar;
+    background-color: rgb(214, 151, 197);
+    padding: 10px ;
+}
+main{
+    grid-area: main;
+    background-color:#e44f8071;;
+    padding: 10px;
+}
+footer{
+    grid-area: footer;
+    background-color: #dc7bf0b7;
+    padding: 10px;
+}
+.KPICards{
+    background-color: #f297f593;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    border-radius: 20px;
+
+}
+.KPI{
+    grid-column: span 3;
+    grid-row: span 3;
+    background-color: #985cb4a8;
+    margin: 20px;
+    text-align: center;
+    border-radius: 12px;
+    justify-content:flex-end ;
+}
+.Tarjeta1{
+    background-color: #db82c1ec;
+    margin: 10px;
+    padding: 8px;
+   font-size: 8px;
+   border-radius: 14px;
+}
+@media(max-width: 768px) {
+     .container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+                        "header"
+                        "main"
+                        "sidebar"
+                        "footer"
+
+   }
+   .KPICards{
+    display: flex;
+    flex-direction: column;
+   }
+   
+
+}
+   
+
+    
+
